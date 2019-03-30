@@ -103,7 +103,8 @@ func (p *playerController) SMSCaptchaGet(c *gin.Context) {
 		}
 		storage.RedisManagerIns.Set(redisKey, captcha, ConstVals.Player.CaptchaExpire)
 	}
-	resp.SmsCaptchReq.Captcha = captcha
+	//测试用
+	//resp.SmsCaptchReq.Captcha = captcha
 	c.JSON(http.StatusOK, resp)
 }
 
